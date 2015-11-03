@@ -8,11 +8,18 @@ client_info = []
   puts "enter last name"
     last_name = gets.chomp
   email = ""
-    until email.include?("@") && email.include?(".com")
+  email_last = ''
+  # 
+    until (email.include?("@") && email_last.include?(".com"))
       puts "enter email"
       email = gets.chomp
+      email_test = email.split(//)
+      email_last = email_test[-4] + email_test[-3] + email_test[-2] + email_test[-1]
     end
   
+
+
+
   hash["first name"] = first_name
   hash["last name"] = last_name
   hash["email"] = email
